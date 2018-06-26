@@ -16,93 +16,97 @@
   }
 
 body {
+
     font-family: 'Courgette', cursive;
-/*    background-color: #333333; */
-    background-image: url(../img/ioda.jpeg);
-    background-color: #333333;
+
+/*    background-color: #c4e0e2;
     background-repeat: no-repeat;
     background-position: 0;
     background-size: 80%;
-    color: #ffffff;
+    color: #613b3b;
     border: 1px solid navy;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     margin: 10px 5px 8px 2px;
-    /* font-style: italic; */
+*/
+    background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%) no-repeat fixed; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 /*
-h1,h2,h3,h4,h5,h6 {
-    font-family: 'Courgette', cursive;
-    font-weigth :300;
+main.conteudo-principal {
+    margin: 20px;
+    border-top: 5px dashed blue;;
+    border-left: 10px solid pink;
+    border-right: 30px dotted darkmagenta;
+    border-bottom: 10px solid navajowhite;
 }
 
-nav {
-    font-family: 'Courgette', cursive;
-    background: #26413C;
-    font-size: 1.2em;
-}
-*/
-
-nav {
-    border: 1px solid #ffffff;
+p.conteudo-principal {
+    background: #ccc;
     padding: 10px;
 }
 
 
-nav a {
-/*    display: inline-block;
-    padding: 10px;
-    color: #fff;
-*/
-    text-decoration: none;
-}
-
-a {
-    color: #ffffff;
-}
-
-pre {
-    border: 1px  dashed red;;
-    padding: 10px;
-}
-
-th {
-    border: 1px  solid white;
-}
-
-td {
-    border: 1px  solid white;
-}
-
-div {
-    border: 1px  solid white;
-/*    background: black; */
-}
-
-
-span {
-    border: 1px  solid white;    
+p.conteudo-principal {
     background: red;
 }
+*/
 
-ul {
-    color: #595968;
+.menu-selecionado {
+    font-weight: bold;
+    border: 1px solid;
+    font-size: 1.1em;
 }
 
-ol {
-    color: #20a2a7;
+
+.conteudo-principal {
+    background: rgba(0,120,120,0.5);
+    margin: 10px;
+    border: 2px solid #ccc;
+    padding: 10px;
+    box-shadow: 2px 2px 20px #333;
+    border-radius: 15px;
+    text-shadow: -1px -1px 1px #fff;
+    font-weight: bold;
+/*    color: transparent; */
+    font-family: verdana;
 }
 
-button {
-    background-color:red;
-    color: white;
+.conteudo-principal .fundo-bonito {
+  background: rgb(50, 117, 141);
 }
 
-article {
-    border: 1px solid green;
-    /* background-color:#703232; */
+#meu-identificador {
+    background: red;
+    color: #fff;
 }
 
-p {
+@keyframes solzinho {
+    0% {
+        transform: scale(.7);
+        box-shadow: 0 0 200px;
+
+    }
+    35% {
+        transform: scale(1) translateX(200px) rotate(180deg);
+        box-shadow: 0 0 300px;
+    }
+    70% {
+        transform: scale(1) translateX(400px) rotate(180deg);
+        box-shadow: 0 0 300px;
+        filter: blur(10px);
+    }
+}
+.esfera {
+    animation: solzinho  1s infinite alternate;
+    width: 300px;
+    height: 300px;
+    border-radius: 300px;
+    background-color: yellow;
+    background-image: url(../img/sol.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 10px dashed yellow;
+    opacity: 0.9;
 }
