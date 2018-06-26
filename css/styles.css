@@ -87,18 +87,28 @@ p.conteudo-principal {
         box-shadow: 0 0 200px;
 
     }
-    35% {
-        transform: scale(1) translateX(200px) rotate(180deg);
+    20% {
+        transform: scale(1) translateX(200px) rotate(90deg);
         box-shadow: 0 0 300px;
     }
-    70% {
+    40% {
         transform: scale(1) translateX(400px) rotate(180deg);
         box-shadow: 0 0 300px;
-        filter: blur(10px);
     }
+    60% {
+        transform: scale(1) translateX(600px) rotate(270deg);
+        box-shadow: 0 0 300px;
+/*        filter: blur(10px); */
+    }
+    80% {
+        transform: scale(1) translateX(800px) rotate(360deg);
+        box-shadow: 0 0 300px;
+/*        filter: blur(10px); */
+    }
+    
 }
 .esfera {
-    animation: solzinho  1s infinite alternate;
+    animation: solzinho 4s infinite alternate;
     width: 300px;
     height: 300px;
     border-radius: 300px;
