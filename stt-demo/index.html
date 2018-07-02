@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>STT</title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <h1>Speech To Text (STT) - by Digitro Tecnologia/LINSE-UFSC</h1>
+
+  <p>Esta aplica&ccedil;&atilde;o funciona em browsers com suporte a HTML5 (WebRTC).</p>
+  <p>Voc&ecirc; deve possuir um microfone e liberar o acesso a ele assim que a p&aacute;gina for carregada!</p>
+
+  <div id="controles" class="Table">
+    <div class="Row">
+      <div class="Cell"><img id="record" src="img/mic128.png"  onclick="botao_start_stop(this);"><br>
+                        <button id="start_stop" onclick="botao_start_stop(this);">Iniciar grava&ccedil;&atilde;o</button> </div>
+      <div class="Cell"><canvas id="analyser" width="700" height="200"></canvas></div>
+    </div>
+  </div>
+  <p></p>
+  <div class="loadfile">
+        Ler um arquivo de áudio local: <input type="file" id="audiofile" name="audiofile"/><br>
+  </div>
+  
+  <div>
+    Servidor:
+    <select id="stt-url">
+     <option value="/process">ec2-18-231-16-102.sa-east-1.compute.amazonaws.com</option>
+     <option value="https://q4scms0fyk.execute-api.sa-east-1.amazonaws.com/BETA/process/">Amazon API Gateway</option>
+    </select>
+  </div>
+  <h2>Grava&ccedil;&otilde;es</h2>
+  <ul id="recordingslist"></ul>
+  
+  <h2>Log</h2>
+  <div>
+  <label><input type="checkbox" id="log-checkbox" onchange="logCheckBoxChanged(this)"></input>Exibir Log</label>
+  </div>
+  <div id="div-log" style = "display:none">
+  <pre id="log"></pre>
+  </div>
+
+  <script src="js/recorder.js"></script>
+  <script src="js/audiodisplay.js"></script>
+  <script src="js/stt-main.js"></script>
+  <script>
+        document.getElementById('audiofile').addEventListener('change', handleFileSelect, false);
+  </script>
+
+</body>
+</html>

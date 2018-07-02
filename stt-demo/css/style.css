@@ -1,0 +1,58 @@
+body {
+    background: lightgray;
+}
+
+ 
+
+ul { list-style: none; }
+
+#recordingslist audio { display: block; margin-bottom: 10px; }
+
+
+#record { background: #d8d8d8; padding: 10px; box-shadow : 0px 0px 5px blue }
+#record.recording {
+  background: red;
+  background: -webkit-radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%);
+  background: -moz-radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%);
+  background: radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%);
+}
+canvas {
+         display: inline-block;
+         background: #202020;
+         box-shadow: 0px 0px 10px blue;
+}
+
+
+.Table
+{
+    display: table;
+}
+.Title
+{
+    display: table-caption;
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+}
+.Heading
+{
+    display: table-row;
+    font-weight: bold;
+    text-align: center;
+}
+.Row
+{
+    display: table-row;
+}
+.Cell
+{
+    display: table-cell;
+    padding-left: 5px;
+    padding-right: 5px;
+    vertical-align: top;
+    text-align: left;
+}
+.textred { color:red; }
+.textbold {  font-weight: bold; }
+.textnormal { font-weight : normal; }
+.textblack { color:black; }
