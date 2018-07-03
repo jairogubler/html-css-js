@@ -1,6 +1,28 @@
 @import 'normalize.css'; 
 @import 'fonts.css';
 
+@keyframes exibir {
+  0% { 
+        display: none; 
+        opacity :0; 
+    }
+  1% { 
+      display: block; 
+      background-color: black;
+      transform: scale(.1) rotate(160deg);
+    }
+  80% {
+      background-color: pink;
+    transform: scale(2) rotate(260deg);
+  }  
+  100% { 
+      opacity: 1; 
+      background-color: blue;
+      transform: scale(1) rotate(0deg);
+    }
+}
+
+
 body {
     font-family: 'Raleway', sans-serif;
 }
@@ -60,4 +82,93 @@ body {
 .box:hover {
     width: 1000px;
     height: 1000px;
+}
+
+.exemplo-hover1 {
+    background: #f1f1f1;
+    padding:  10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #333; 
+}
+
+.exemplo-hover1 .nivel1 {
+    border: 1px solid #000;
+    background: red;
+    color: #fff;
+    padding:  10px;
+    margin: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+.exemplo-hover1 .nivel2 {
+    background: #ccc;
+    color: #fff;
+    padding:  10px;
+    margin: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+.exemplo-hover1:hover .nivel1 {
+    display: block;
+}
+
+.exemplo-hover1 .nivel1 .nivel2 {
+    display: none;
+}
+
+.exemplo-hover1:hover .nivel1:hover .nivel2 {
+    display: block;
+}
+
+input,
+textarea,
+select,
+button {
+    border: 1px solid #333;
+    box-shadow: inset 1px 2px 2px #333;
+    border-radius: 2px;
+    padding: 2px;
+    margin : 2px;
+    border : 4px solid #333;
+    transition: 2s border ease-in-out;
+}
+
+button,
+input[type=reset],
+input[type=submit],
+input[type=button] {
+    background-color: #008080;
+    color: #fff;
+    border: 1px solid;
+    padding: 5px 10px;
+    box-shadow: 2px 2px 2px #333;
+}
+
+input:focus,
+textarea:focus,
+button:focus,
+select:focus {
+    border: 2px solid red;
+}
+
+
+input:hover,
+textarea:hover,
+button:hover,
+select:hover {
+    border: 2px solid green;
+}
+
+
+input:active,
+textarea:active,
+button:active,
+selectborder {
+    border: 2px solid blue;
+}
+label {
+    vertical-align: top;
 }

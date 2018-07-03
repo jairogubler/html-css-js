@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Pseudo Classes</title>
+</head>
+
+<body>
+    <main>
+        <h1>Exemplo com pseudo-classes</h1>
+        <h2>hover</h2>
+        <div class="exemplo-hover1">
+            Passe o mouse
+            <div class="nivel1">Menu a
+                <div class="nivel2">Conteúdo Oculto a1</div>
+            </div>
+            <div class="nivel1">Menu b
+                <div class="nivel2">Conteúdo Oculto b1</div>
+            </div>
+        </div>
+        <h2>Focus</h2>
+        <form action="">
+            <div>
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input placeholder="Digitro o seu nome" name="nome" id="nome" type="text" class="entrada-de-texto ">
+                </div>
+                <div>
+                    <label for="texto">Texto:</label>
+                    <textarea placeholder="Digitreo uma mensagem" name="texto" id="texto" class="entrada-de-texto " cols="30 " rows="4 "></textarea>
+                </div>
+                <div>
+                    <label for="opcoes">Opções</label>
+                <select name="opcoes" id="opcoes" class="opcoes ">
+                    <option value=" ">Selecione</option>
+                    <option value="01 ">Santa Catarina</option>
+                    <option value="02 ">São Paulo</option>
+                </select>
+            </div>
+                <button class="botao ">Botão tipo button</button>
+                <input class="botao" type="submit" value="Tipo Submit">
+                <input class="botao" type="reset" value="Limpar">
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>

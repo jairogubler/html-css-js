@@ -15,3 +15,7 @@ http://www.colorzilla.com/gradient-editor/
 *italic*
 
 ~riscado
+
+Pseudo Classes
+
+https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-classes
