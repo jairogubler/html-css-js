@@ -22,6 +22,29 @@
     }
 }
 
+@keyframes vim-da-esquerda {
+    from {
+        opacity :0;
+        transform: translateX(-300px);
+
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes vim-da-direita {
+    from {
+        opacity :0;
+        transform: translateX(300px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
 body {
     font-family: 'Raleway', sans-serif;
@@ -171,4 +194,70 @@ selectborder {
 }
 label {
     vertical-align: top;
+}
+
+input:not(.botao) {
+    border: 10px solid orange;
+}
+
+.botao:not(.he-man):not(.he-man2) {
+    background: blue;
+
+}
+
+.lista { 
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.lista li {
+   padding: 5px;
+   background: #ccc;
+   color: blue;
+   font-weight: bold;
+}
+
+.lista li:first-child {
+    color: yellow;
+}
+
+.lista li:last-child {
+    color: green;
+}
+
+.lista-zebrada {
+    background:#f1f1f1;
+    list-style: none;
+    padding: 0;
+}
+
+.lista-zebrada li {
+  padding: 5px;
+}
+
+.lista-zebrada li:nth-child(odd) {
+    background: #ccc; 
+}
+
+.lista-zebrada-item {
+list-style: none;
+}
+
+.lista-zebrada li:nth-child(even) {
+    background: paleturquoise;
+}
+
+.lista-zebrada-item .item:nth-child(odd) {
+    background: red;
+    animation: 5s vim-da-direita;
+}
+
+.lista-zebrada-item .item:nth-child(even) {
+    background: yellow;
+    animation: 5s vim-da-esquerda;
+}
+
+.box2 div:nth-of-type(3n+1){
+  background: red;
 }
