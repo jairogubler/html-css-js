@@ -258,6 +258,6 @@ list-style: none;
     animation: 5s vim-da-esquerda;
 }
 
-.box2 div:nth-of-type(3n+1){
+.box2 div:nth-of-type(3n+1  ){
   background: red;
 }
