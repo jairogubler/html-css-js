@@ -16,20 +16,21 @@
 		<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
 
 		<!-- post title -->
-		<h2>
+		<h2 class="titulo-post">
 			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 		</h2>
 		<?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
-		</div>
-		<!-- /post title -->
 
 		<!-- post details -->
 		<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
 		<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
 		<!-- /post details -->
-
-
 		<?php edit_post_link(); ?>
+
+		</div>
+		<!-- /post title -->
+
+
 
 	</article>
 	<!-- /article -->
