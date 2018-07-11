@@ -163,7 +163,7 @@ msgstr "Últimos Posts"
 #: ../search.php:6
 #, php-format
 msgid "%s Search Results for "
-msgstr "%s resultados ao pesquisar"
+msgstr "%s resultados ao pesquisar "
 
 #: ../searchform.php:5
 msgid "Search"
