@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- https://css-tricks.com/snippets/css/a-guide-to-flexbox/ -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .pai {
+            width: 500px;
+            height: 300px;
+            border: 2px solid #000;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .invertendo-colunas {
+            flex-direction: row-reverse;
+        }
+
+        .quebrando-em-linhas {
+            flex-wrap: wrap;
+        }
+
+        .flex-flow {
+            flex-flow: wrap row-reverse;
+
+        }
+
+        .alinhamento-horizontal {
+            justify-content: center;
+        }
+
+
+        .alinhamento-vertical {
+            align-items: center;
+        }
+
+        .alinhamento-vertical-geral {
+            flex-wrap: wrap;
+            align-content: center;
+        }
+
+
+        [class^=filho] {
+            border: 2px solid yellow;
+            background-color: red;
+            color: yellow;
+            height: 100px;
+            box-sizing: border-box;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .filho3 {
+            flex-basis: 50%;
+        }
+
+        .row {
+            border: solid 1px black;
+            display: flex;
+            width: 500px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+        }
+
+        .column1 {
+            flex-basis: calc(70% - 20px);
+            padding: 10px;
+            text-align : center;
+            background:lightblue;
+
+        }
+
+        .column2 {
+            flex-basis: calc(30% - 20px);
+            padding: 10px; 
+            text-align : center;
+            background: gray;
+
+        }
+
+        .linha100p {
+            flex-basis: 100%;
+            text-align : center;
+            background: yellow;
+        }
+        .linha100p-bottom {
+            flex-basis: 100%;
+            text-align : center;
+            background: lightgreen;
+        }        
+    </style>
+    <title>Display Flex</title>
+</head>
+
+<body>
+    <h1>Display Flex Básico</h1>
+    <div class="pai">
+        <div class="filho1">Filho 1</div>
+        <div class="filho2">Filho 2</div>
+        <div class="filho3">Filho 3</div>
+        <div class="filho4">Filho 4</div>
+        <div class="filho5">Filho 5</div>
+        <div class="filho6">Filho 6</div>
+        <div class="filho7">Filho 7</div>
+        <div class="filho8">Filho 8</div>
+    </div>
+    <h1> Display flex básico invertendo ordem das colunas</h1>
+    <div class="pai invertendo-colunas">
+        <div class="filho1">Filho 1</div>
+        <div class="filho2">Filho 2</div>
+        <div class="filho3">Filho 3</div>
+        <div class="filho4">Filho 4</div>
+        <div class="filho5">Filho 5</div>
+        <div class="filho6">Filho 6</div>
+        <div class="filho7">Filho 7</div>
+        <div class="filho8">Filho 8</div>
+    </div>
+    <h1>Display flex wrap</h1>
+    <div class="pai quebrando-em-linhas">
+        <div class="filho1">Filho 1</div>
+        <div class="filho2">Filho 2</div>
+        <div class="filho3">Filho 3</div>
+        <div class="filho4">Filho 4</div>
+        <div class="filho5">Filho 5</div>
+        <div class="filho6">Filho 6</div>
+        <div class="filho7">Filho 7</div>
+        <div class="filho8">Filho 8</div>
+    </div>
+    <h1>Display flex flow</h1>
+    <div class="pai flex-flow">
+        <div class="filho1">Filho 1</div>
+        <div class="filho2">Filho 2</div>
+        <div class="filho3">Filho 3</div>
+        <div class="filho4">Filho 4</div>
+        <div class="filho5">Filho 5</div>
+        <div class="filho6">Filho 6</div>
+        <div class="filho7">Filho 7</div>
+        <div class="filho8">Filho 8</div>
+    </div>
+    <h1>Alinhamento horizontal com justify-content</h1>
+    <div class="pai alinhamento-horizontal">
+        <div class="filho1">Filho 1</div>
+    </div>
+    <h1>Alinhamento vertical com align-items</h1>
+    <div class="pai alinhamento-vertical">
+        <div class="filho1">Filho 1</div>
+        <div class="filho2">Filho 2</div>
+    </div>
+    <h1>Alinhamento geral vertical com align-content</h1>
+    <div class="pai alinhamento-vertical-geral">
+        <div class="filho1">Filho 1</div>
+        <div class="filho2">Filho 2</div>
+        <div class="filho3">Filho 3</div>
+        <div class="filho4">Filho 4</div>
+        <div class="filho5">Filho 5</div>
+        <div class="filho6">Filho 6</div>
+        <div class="filho7">Filho 7</div>
+        <div class="filho8">Filho 8</div>
+    </div>
+    <h1>Coluna: 70/30</h1>
+    <div class="row">
+        <div class="linha100p">
+            Linha 100%
+        </div>
+        <div class="column1">
+            Coluna1
+        </div>
+        <div class="column2">
+            Coluna2
+        </div>
+        <div class="linha100p-bottom">
+            Linha 100%
+        </div>
+    </div>
+</body>
+
+</html>
