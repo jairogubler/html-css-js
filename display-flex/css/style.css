@@ -1,0 +1,129 @@
+er /* latin-ext */
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v12/1Ptug8zYS_SKggPNyCMIT5lu.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v12/1Ptug8zYS_SKggPNyC0ITw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.wrapper {
+    width: 80vw;
+    border: 2px solid #000;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: wrap;
+}
+
+.cabecalho,
+.conteudo,
+.rodape {
+    flex-basis : 100%;
+    display: flex;
+}
+
+.conteudo {
+  
+}
+
+.conteudo .menu-lateral {
+    flex-basis : 30%;
+    display: flex;
+}
+.conteudo .conteudo-principal {
+    flex-basis : 70%;
+}
+
+.rodape  {
+    margin: 2px;
+    padding: 5px;
+    justify-content: space-evenly;
+    background: lightblue;
+}
+
+.cabecalho {
+    margin: 2px;
+    padding: 5px;
+    justify-content: space-evenly;
+    background: lightgray;
+}
+
+.cabecalho .menu-top a {
+    color: red;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px #ccc;
+    transition: all .3s ease-in-out;
+  }
+
+  
+.cabecalho .menu-top a:hover {
+    text-decoration: underline;
+    background-color: #fff;
+    color: #333;
+  }
+
+.menu-lateral {
+    flex-flow: wrap;
+}
+
+
+.menu-lateral-item {
+    padding : 2px;
+    display: flex;
+}
+
+.titulo-noticia {
+    font-size: 0.9em;
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.noticia-imagem {
+  flex-basis: 50%;
+  padding : 2px;   
+}
+
+.noticia-corpo {
+    padding : 2px;
+    flex-basis: 50%;
+    height: 200px;
+    overflow: hidden;
+}
+
+
+.rodape ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    display : flex;
+    justify-content: space-around;
+    flex-basis: 100%;
+}
+
+.rodape ul li {
+}
+
+.rodape ul li a {
+    padding: 10px;
+    color: red;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px #ccc;
+    transition: all .3s ease-in-out;
+}
+
+.rodape ul li a:hover {
+  background-color: #fff;
+  color: #333;
+}
