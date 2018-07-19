@@ -52,3 +52,7 @@ criamos página videos.html
 tag video
 tag audio
             
+
+https://www.pexels.com/
+https://fontawesome.com/icons?m=free
+https://icomoon.io/

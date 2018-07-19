@@ -43,6 +43,7 @@ body {
 }
 .conteudo .conteudo-principal {
     flex-basis : 70%;
+    padding: 5px;
 }
 
 .rodape  {
@@ -74,7 +75,7 @@ body {
   }
 
 .menu-lateral {
-    flex-flow: wrap;
+    flex-flow: column;
 }
 
 
@@ -88,6 +89,16 @@ body {
     color: red;
     text-decoration: none;
     font-weight: bold;
+}
+
+.noticia-corpo a {
+    text-shadow: 1px 1px 2px #ccc;
+    transition: all .3s ease-in-out;
+}
+
+.noticia-corpo a:hover {
+    background-color: #555;
+    color: #fff;
 }
 
 .noticia-imagem {
@@ -127,3 +138,78 @@ body {
   background-color: #fff;
   color: #333;
 }
+
+
+.row {
+    display: flex;
+    flex-basis: 100%;
+}
+
+[class ^="coluna"] {
+  border: 1px solid #000;
+}
+
+.coluna1 {
+    flex-basis: calc(100% - 2px);
+}
+
+.coluna2 {
+    flex-basis: calc(50% - 2px);
+}
+
+.coluna3 {
+    flex-basis: calc(33.333% - 2px);
+}
+
+.coluna4 {
+    flex-basis: calc(25% - 2px);
+}
+
+.coluna5 {
+    flex-basis: calc(20% - 2px);
+}
+
+.coluna6 {
+    flex-basis: calc(16.666% - 2px);
+}
+
+.coluna7 {
+    flex-basis: calc(14.285% - 2px);
+}
+
+.coluna8 {
+    flex-basis : calc(12.5% - 2px);
+}
+
+.coluna9 {
+    flex-basis : calc(11.111% - 2px);
+}
+
+.coluna10 {
+    flex-basis: calc(10% - 2px);
+}
+
+.coluna11 {
+    flex-basis: calc(9.090% - 2px);
+}
+
+.coluna12 {
+    flex-basis: calc(8.333% - 2px);
+}
+
+.espacado {
+    justify-content: space-evenly;
+}
+
+.espacado a {
+    text-decoration: none;
+    color: #555;
+    transition: .3s all ease;
+    padding : 10px;
+}
+
+.espacado a:hover {
+    background-color: #555;
+    color: #fff;
+}
+
