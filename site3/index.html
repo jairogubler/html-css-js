@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bem vindo ao javascript!!!</title>
+    <style>
+    .relogio {
+        border: solid 1px red;
+        padding: 2px;
+        color: blue;
+    }
+    </style>
+</head>
+<body>
+<div class="ola">Primeiro olá</div>
+<div class="ola">Segundo olá</div>
+<div class="pai">
+    <div class="filho">1</div>
+    <div class="filho">2</div>
+    <div class="filho">3</div>
+</div>
+
+<script>
+    window.addEventListener("load", function () {
+        inserirTextoNoOla();
+        setInterval(mudaOTextoDeTodosOsOlas, 1000);
+        paiEfilhos();
+    });
+    function inserirTextoNoOla() {
+        let divOla = document.querySelector(".ola");
+        divOla.innerHTML = "Olá Dígitro.";
+    }
+    function mudaOTextoDeTodosOsOlas() {
+        let olas = document.querySelectorAll(".ola");
+        for (let ola of olas) {
+            ola.innerHTML = "Horário agora: "+ new Date();
+            ola.style.backgroundColor = "pink";
+            ola.className = "relogio";
+        }
+    }
+
+    function paiEfilhos() {
+        let pai = document.querySelector(".pai");
+        let filhos = pai.querySelectorAll(".filho");
+        for (let i = 0; i < filhos.length; i++) {
+            let filho = filhos[i];
+            filho.style.backgroundColor = 'red';
+            filho.style.fontWeight = "bold";
+            filho.style.textDecoration = "underline";
+        }       
+    }
+</script>
+</body>
+</html>
