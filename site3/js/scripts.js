@@ -1,12 +1,8 @@
-function exibirModal(event) {
-    document.querySelector(".modal").style.display = "block";
-}
 
-function fecharModal(event) {
-    document.querySelector(".modal").style.display = "none";
-}
+function getIP() {
+    var paragrafo = $(".modal-body p");
+    paragrafo.html("Consultando IP");
 
-function teste() {
     var xhr = new XMLHttpRequest();
     let result = xhr.open('GET', "https://ipinfo.io/json", true);
     xhr.send();
@@ -15,33 +11,42 @@ function teste() {
     function processRequest(e) {
         if (xhr.readyState == 4 && xhr.status == 200) {
             var response = JSON.parse(xhr.responseText);
-            alert(response.ip);
+            paragrafo.html("Seu IP é " + response.ip);
         }
-    
     }
-    
+
 }
 
 
-document.querySelector(".gatilho-modal").addEventListener("dblclick", exibirModal);
-/*document.querySelector(".btn-close").addEventListener("dblclick", fecharModal); */
-document.querySelector(".btn-close").addEventListener("blur", fecharModal);
-document.querySelector(".btn-x").addEventListener("keypress", fecharModal);
-/*document.querySelector(".btn-save").addEventListener("dblclick", fecharModal); */
+/*
+document.querySelector(".gatilho-modal").addEventListener("click", exibirModal);
+document.querySelector(".btn-close").addEventListener("click", fecharModal);
+document.querySelector(".btn-x").addEventListener("click", fecharModal);
 document.querySelector(".btn-save").addEventListener("click", teste); 
+*/
+
+$(".gatilho-modal").on("click", function (event) {
+    /*    document.querySelector(".modal").style.display = "block"; */
+    $(".modal").css('display', 'block');
+});
 
 
-window.addEventListener("load", function () {
-  let customBackground = document.querySelector(".custom-background");
-  let contador = 0;
-  setInterval(function () {
-      if (contador == 0) {
-          customBackground.style.background = "url(img/background.jpg) no-repeat";
-      }
-      else {
-          customBackground.style.background = `url(img/background${contador}.jpg) no-repeat`;
-      }
-      contador = (contador +1) %4;
-  }, 5000);
+$(".btn-close, .btn-x").on("click", function (event) {
+    $(".modal").css({ 'display': 'none' });
+});
+
+$(".btn-save").on("click", getIP);
+
+
+//  window.addEventListener("load", function () {
+
+$(document).ready(function () {
+    let customBackground = $(".custom-background");
+    let contador = 1;
+    setInterval(function () {
+        customBackground.css("background", `url(img/background${contador}.jpg) no-repeat`);
+        customBackground.css("background-size", "cover");
+        contador = (contador + 1) % 6;
+    }, 4000);
 });
 

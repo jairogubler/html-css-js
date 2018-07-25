@@ -1,6 +1,6 @@
 @keyframes galeria {
     0% {
-        background : url(../img/background.jpg) no-repeat;
+        background : url(../img/background0.jpg) no-repeat;
     }
     50% {
         background : url(../img/background2.jpg) no-repeat;
@@ -11,18 +11,27 @@
 
 }
 
+@keyframes moverFundo {
+    from {
+        transform : translate(-50%, -50%);
+    }
+    to {
+        transform : translate(-50%, -40%);
+    }
+}
+
 .custom-background {
-    background: url(../img/background.jpg) no-repeat;
+    background: url(../img/background0.jpg) no-repeat;
     background-size: cover;
     transition: all  .4s;
     background-position : center;
-    filter: grayscale(100%);
+    filter: grayscale(0%);
     animation : galeria all 10s;
 }
 
 .custom-background:hover {
     background-size : 150%;
-    filter: grayscale(0%);
+    filter: grayscale(100%);
 }
 
 .custom-background:after {
@@ -31,4 +40,17 @@
 
 .custom-background .text-muted {
     color: white !important;
+}
+
+.image-box {
+    height: 192px;
+    overflow : hidden;
+    position : relative;
+}
+.image-box img {
+    position : absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation : moverFundo 5s alternate-reverse infinite;
 }
