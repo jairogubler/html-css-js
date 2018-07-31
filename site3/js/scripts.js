@@ -37,7 +37,6 @@ $(".btn-close, .btn-x").on("click", function (event) {
 
 $(".btn-save").on("click", getIP);
 
-
 //  window.addEventListener("load", function () {
 
 $(document).ready(function () {
@@ -50,3 +49,42 @@ $(document).ready(function () {
     }, 4000);
 });
 
+
+var regexemail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+$("#form-login").on('submit', function (e) {
+    $('#form-login .form-group').each(function () {
+        $(this).removeClass('error');
+    });
+
+    let isFormValid = true;
+    let email = $('#exampleInputEmail1');
+    let password = $('#exampleInputPassword1');
+    let inputDate = $('#exampleDate');
+
+    if (!regexemail.test(email.val())) {
+        isFormValid = false;
+        email.parent().addClass("error");
+    }
+    if (!password.val()) {
+        isFormValid = false;
+        password.parent().addClass("error");
+        password.next().html('Password Inválido!')
+    }
+    else if (password.val().length < 6) {
+        isFormValid = false;
+        password.parent().addClass("error");
+        password.next().html('Senha muito pequena!')
+
+    }
+    if (!inputDate.val()) {
+        isFormValid = false;
+        inputDate.parent().addClass("error");
+    }
+    if (isFormValid) {
+        alert("Fomulário enviado com sucesso!!");
+    } else {
+        alert("Seu tanso, o formulário contém erros!!");
+        e.preventDefault();
+    }
+});

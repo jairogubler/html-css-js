@@ -54,3 +54,13 @@
     transform: translate(-50%, -50%);
     animation : moverFundo 5s alternate-reverse infinite;
 }
+.error-message{
+    color: red;
+    font-size: .8em;
+    margin-left: 12px;
+    display: none;
+}
+
+.error .error-message{
+    display: block;
+}
