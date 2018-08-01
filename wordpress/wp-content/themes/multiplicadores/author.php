@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 
-	<main role="main">
+	<main class="conteudo-principal" role="main">
 		<!-- section -->
 		<section>
 
 		<?php if (have_posts()): the_post(); ?>
 
-			<h1><?php _e( 'Author Archives for ', 'html5blank' ); echo get_the_author(); ?></h1>
+			<h1><?php _e( 'Author Archives for ', 'html5blank' ); echo ' '.get_the_author(); ?></h1>
 
 		<?php if ( get_the_author_meta('description')) : ?>
 

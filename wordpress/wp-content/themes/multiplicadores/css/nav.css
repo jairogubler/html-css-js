@@ -1,0 +1,81 @@
+.nav .menu ul {
+	list-style: none;
+	background-color: #a9d8b8;
+	float: left;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.nav .menu ul li {
+	float: left;
+	position:  relative;
+	z-index: 2;
+
+}
+.nav .menu ul li a {
+   display: block;
+   padding: 5px;
+   border-right: 1px dotted white;
+} 
+
+.nav .menu ul li:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top : 50px;
+  bottom: 0;
+  background-color: #72705b;
+  transition: .5s all;
+  z-index: -1;
+}
+
+.nav .menu ul li:nth-child(1):after {
+	background-color: darkmagenta;
+}
+
+.nav .menu ul li:nth-child(2):after {
+	background-color: blue;
+}
+
+.nav .menu ul li:nth-child(3):after {
+	background-color: darkcyan;
+}
+
+
+.nav .menu ul li:hover:after {
+  top: 0px;
+  left: 0;
+  right: 0;
+  content: '';
+}
+
+.nav .menu ul li:hover {
+  color: #fff;
+  z-index: 100;
+}
+
+/*
+.nav .menu ul li a:hover {
+	background-color: #72705b;
+	color: #fff; 
+}
+*/
+
+.nav .menu ul li:last-child a {
+	border-color: transparent;
+}
+
+
+@media only screen and (max-width:480px) {
+    .nav .menu ul {
+        float: none;
+        width: 80%;
+        margin : 0 auto;
+        background-color:transparent;
+    }
+    .nav .menu ul li {
+        float: none;
+    }
+}

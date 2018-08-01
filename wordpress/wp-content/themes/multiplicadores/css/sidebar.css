@@ -1,0 +1,26 @@
+
+.sidebar-widget a:hover {
+	color: #008080;
+}
+.sidebar-widget h3{
+	font-size: 1.4em;
+	font-weight: bold;
+	position: relative;
+	padding-left: 20px;
+}
+
+.sidebar-widget h3:before {
+	content: '\00BB';
+	font-size: 2em;
+	position: absolute;
+	top: -13px;
+	left: 0px;
+	color: #000080;
+}
+.sidebar-widget h3:after {
+	content: '\00BB';
+	font-size: 2em;
+	position: absolute;
+	top: -13px;
+	color: #000080;
+}

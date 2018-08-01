@@ -1,0 +1,32 @@
+.widget_archive ul, 
+.widget_categories ul {
+	list-style: none;	
+	padding: 0;
+}
+
+.widget_archive ul li,
+.widget_categories ul li {
+	display: block;
+	padding: 5px;
+	border-bottom: 1px dotted #888;
+}
+
+.widget_archive ul li:last-child,
+.widget_categories ul li:last-child {
+	border : none;
+}
+
+.tagcloud {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.tagcloud a {
+	padding: 5px;
+	display: inline-block;
+	transition: 1s transform ease;
+}
+
+.tagcloud a:hover {
+	transform: scale(1.2);
+}

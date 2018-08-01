@@ -1,0 +1,17 @@
+@media print {
+    .header, .sidebar, 
+    .comments, .pagination, .post-edit-link {
+        display : none;
+    }
+    
+    a {
+        text-decoration : none;
+    }
+    .conteudo-principal {
+        width: 100%;
+    }
+
+    .eco {
+        display : block;
+    }
+}

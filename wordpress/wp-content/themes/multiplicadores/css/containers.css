@@ -1,0 +1,46 @@
+.titulo-post {
+    margin-top: 0;
+}
+
+.titulo-post a, .author a, .comments a, .post-edit-link {
+    color: #008080;
+}
+
+.titulo-post a:hover, .author a:hover, .comments a:hover, .post-edit-link:hover, .widget_categories ul li a:hover {
+    text-decoration: underline;
+}
+
+.conteudo-principal {
+    float: left;
+    width: 70%;
+    /*border: 1px solid #000; */
+}
+
+.conteudo-principal h1 {
+    margin-top: 4px;
+}
+
+.sidebar {
+    float: right;
+    width: 30%;
+    /*	border: 1px solid #000; */
+}
+
+/*.date {
+      font-style: italic;
+      font-weight: bold;
+  }*/
+
+
+@media only screen and (max-width:480px) {
+    .conteudo-principal {
+        float: none;
+        width: 100%;
+        padding : 10px;
+    }
+    .sidebar {
+        float : none;
+        width: 100%;
+        padding : 10px;
+    }
+}
