@@ -1,0 +1,7 @@
+$cor-primaria: #008080;
+body {
+    background-color: lighten($cor-primaria,10%);
+    color: darken($cor-primaria,5%);
+}
+
+@import "componentes/box";

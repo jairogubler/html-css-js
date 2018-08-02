@@ -1,0 +1,16 @@
+.tamanho-caixa {
+    width: 300px;
+    height: 300px;
+}
+.box {
+    @extend .tamanho-caixa;
+    background-color: lighten(#000,20%);
+    &:hover{
+        background-color: lighten(#000,50%);
+    }
+}
+
+.box2 {
+    @extend .tamanho-caixa;
+    background-color: blue;
+}
